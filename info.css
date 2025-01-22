@@ -1,6 +1,7 @@
 /**
  * I do not have a large external CSS file as I used tailwindcss as my framework, relying on custom clas name styling throughout the project.
- * By using tailwind CDN and CLI, I do not need a output.css file, however, the cdn (https://cdn.tailwindcss.com/3.4.16) is the same thing
+ * By using tailwind CDN and CLI, I do not need a output.css file, however the cdn (https://cdn.tailwindcss.com/3.4.16) is the same thing
+ * and when clicked on, it will show the raw, gigantic external CSS file, which I did not want to store here.
  * I included this page with some fun CSS to change the font and other tags to show that I am able to write custom, raw CSS.
  */
 
