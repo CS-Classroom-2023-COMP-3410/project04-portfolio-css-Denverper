@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overscroll-none">
+  <nav class="bg-opacity-80 bg-black sticky top-0 z-10 flex py-4 px-6">
+    <div class="container mx-auto flex justify-between items-center ">
+      <h1 class="text-2xl font-bold">Contact Me</h1>
+      <div class="hidden md:flex space-x-6">
+        <a href="../index.html" class="hover:text-blue-400">Home</a>
+        <a href="./about.html" class="hover:text-blue-400">About Me</a>
+        <a href="./projects/index.html" class="hover:text-blue-400">Projects</a>
+        <a href="./gallery/index.html" class="hover:text-blue-400">Gallery</a>
+      </div>
+    </div>
+    <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
+    <a href="../index.html" class="text-2xl hover:text-gray-400">Home</a>
+    <a href="./about.html" class="text-2xl hover:text-gray-400">About Me</a>
+    <a href="./projects/index.html" class="text-2xl hover:text-gray-400">Projects</a>
+    <a href="./gallery/index.html" class="text-2xl hover:text-gray-400">Gallery</a>
+    <button id="menu-close" class="mt-8 py-2 px-6 bg-gray-800 text-white rounded hover:bg-gray-700">Close</button>
+  </div>
+</nav>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuClose = document.getElementById('menu-close');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.remove('hidden');
+    });
+
+    menuClose.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  </script>
+
+  <div class="min-h-screen flex flex-col items-center justify-center px-6">
+    <div class="bg-opacity-90 bg-black p-8 rounded-lg shadow-lg w-full max-w-lg">
+      <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
+      <p class="text-center mb-6">Have a question or just want to say hi? Fill out the form below!</p>
+      <form action="mailto:denver.persinger@du.edu" method="get" class="space-y-4">
+        <div>
+          <label for="name" class="block mb-1 font-semibold">Name</label>
+          <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your name">
+        </div>
+        <div>
+          <label for="email" class="block mb-1 font-semibold">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your email">
+        </div>
+        <div>
+          <label for="message" class="block mb-1 font-semibold">Message</label>
+          <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 px-6 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg shadow-lg transform hover:scale-105 transition-transform">Send Email</button>
+      </form>
+    </div>
+    <p class="mt-6 text-blue-400"><a href="index.html">&#x1F680; Back to Home</a></p>
+  </div>
+
+  <footer class="mt-12 py-6 bg-black bg-opacity-80">
+    <div class="text-center text-gray-400">
+      <p>Reach for the stars!</p>
+    </div>
+  </footer>
+</body>
+</html>

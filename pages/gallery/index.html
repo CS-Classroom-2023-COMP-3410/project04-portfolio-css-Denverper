@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A gallery showcasing some of my favorite images of space.">
+  <meta name="author" content="Denver Persinger">
+  <title>Space Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 via-black to-gray-900 py-12">
+    <div class="text-center">
+      <h1 class="text-5xl font-extrabold text-white">Space Gallery</h1>
+      <p class="mt-4 text-lg text-gray-300">A journey through the wonders of the universe.</p>
+    </div>
+  </header>
+
+    <!-- Navigation Section -->
+    <nav class="bg-black py-4 sticky top-0 z-10 bg-opacity-70">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <h2 class="text-xl font-bold text-white-900">Menu</h2>
+        <div class="hidden md:flex space-x-8">
+          <a href="../../index.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Home</a>
+          <a href="../projects/index.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Projects</a>
+          <a href="../gallery/index.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Gallery</a>
+          <a href="../contact.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Contact Me</a>
+        </div>
+        <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+  
+      <div id="menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
+        <a href="../../index.html" class="text-2xl hover:text-gray-400">Home</a>
+        <a href="../projects/index.html" class="text-2xl hover:text-gray-400">Projects</a>
+        <a href="../gallery/index.html" class="text-2xl hover:text-gray-400">Gallery</a>
+        <a href="../contact.html" class="text-2xl hover:text-gray-400">Contact Me</a>
+        <button id="menu-close" class="mt-8 py-2 px-6 bg-gray-800 text-white rounded hover:bg-gray-700">Close</button>
+      </div>
+    </nav>
+  
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      const menuClose = document.getElementById('menu-close');
+  
+      menuToggle.addEventListener('click', () => {
+        menu.classList.remove('hidden');
+      });
+  
+      menuClose.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    </script>
+
+  <!-- Image Gallery -->
+  <section class="container mx-auto py-12 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Image 1 -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg">
+        <img src="../../assets/images/space1.jpeg" alt="Picture of Space" 
+          class="w-full h-auto transition-transform duration-500 transform group-hover:scale-150">
+        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p class="text-center text-lg font-semibold text-gray-100 px-4">
+            A stunning image of space. Its intricate details resemble the human hand, a celestial masterpiece.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Image 2 -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg">
+        <img src="../../assets/images/pluto.jpeg" alt="Picture of Pluto" 
+          class="w-full h-auto transition-transform object-cover w-full h-full duration-500 transform group-hover:scale-150">
+        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p class="text-center text-lg font-semibold text-gray-100 px-4">
+            Pluto, the icy dwarf planet at the edge of our solar system, shrouded in mystery and beauty.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg">
+        <img src="../../assets/images/earthrise.jpeg" alt="Picture of the Apollo 11 Earthrise" 
+          class="w-full h-auto transition-transform object-cover w-full h-full duration-500 transform group-hover:scale-150">
+        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p class="text-center text-lg font-semibold text-gray-100 px-4">
+            Earthrise, captured by Apollo 11, showcasing the fragile beauty of our home planet.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg">
+        <img src="../../assets/images/jupiter.jpg" alt="Photo of Jupiter" 
+          class="w-full h-auto transition-transform object-cover w-full h-full duration-500 transform group-hover:scale-150">
+        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p class="text-center text-lg font-semibold text-gray-100 px-4">
+            Jupiter, the gas giant, with its swirling storms and iconic Great Red Spot.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image 5 -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg">
+        <img src="../../assets/images/cool_space.jpg" alt="Very colorful and interesting photo of space" 
+          class="w-full h-auto transition-transform object-cover w-full h-full duration-500 transform group-hover:scale-150">
+        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p class="text-center text-lg font-semibold text-gray-100 px-4">
+            A mesmerizing view of colorful nebulae, highlighting the vibrant palette of the cosmos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Image 6 -->
+      <div class="group relative overflow-hidden rounded-lg shadow-lg">
+        <img src="../../assets/images/galaxy.jpg" alt="A photo of a galaxy" 
+          class="w-full h-auto transition-transform object-cover w-full h-full duration-500 transform group-hover:scale-150">
+        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <p class="text-center text-lg font-semibold text-gray-100 px-4">
+            A spiral galaxy, a glowing testament to the beauty of our universe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center text-gray-300 py-6">
+    <a href="../index.html" class="text-gray-200 hover:text-white text-lg">
+      &#x1F680; Back to Home
+    </a>
+  </footer>
+
+</body>
+</html>

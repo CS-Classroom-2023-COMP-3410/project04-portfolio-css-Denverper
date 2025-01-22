@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about Denver Persinger, a passionate software developer with experience in Python, Java, C++, and React.">
+  <meta name="keywords" content="Denver Persinger, software developer, Python, Java, C++, React">
+  <meta name="author" content="Denver Persinger">
+  <title>About Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+  <!-- Header Section -->
+  <header class="bg-cover bg-center h-96 flex justify-center items-center" style="background-image: url('../assets/images/stars_bg.png');">
+    <h1 class="text-5xl md:text-7xl font-bold text-white">About Me</h1>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav class="bg-gray-300 py-4 sticky top-0 z-10 bg-opacity-90">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h2 class="text-xl font-bold text-gray-900">Menu</h2>
+      <div class="hidden md:flex space-x-8">
+        <a href="../index.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Home</a>
+        <a href="./projects/index.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Projects</a>
+        <a href="./gallery/index.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Gallery</a>
+        <a href="./contact.html" class="py-2 px-4 bg-white text-gray-900 rounded-full hover:bg-gray-200">Contact Me</a>
+      </div>
+      <button id="menu-toggle" class="block md:hidden text-gray-900 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
+      <a href="../index.html" class="text-2xl hover:text-gray-400">Home</a>
+      <a href="./projects/index.html" class="text-2xl hover:text-gray-400">Projects</a>
+      <a href="./gallery/index.html" class="text-2xl hover:text-gray-400">Gallery</a>
+      <a href="./contact.html" class="text-2xl hover:text-gray-400">Contact Me</a>
+      <button id="menu-close" class="mt-8 py-2 px-6 bg-gray-800 text-white rounded hover:bg-gray-700">Close</button>
+    </div>
+  </nav>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuClose = document.getElementById('menu-close');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.remove('hidden');
+    });
+
+    menuClose.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  </script>
+
+  <!-- About Me Section -->
+  <section class="bg-gray-50 py-10">
+    <div class="container mx-auto flex flex-wrap items-center justify-center px-4">
+      <img src="../assets/images/headshot.jpg" alt="My Headshot" class="w-48 rounded-full shadow-lg mb-6 md:mb-0 md:mr-8">
+      <div class="max-w-2xl text-center md:text-left">
+        <p class="text-lg text-gray-800">
+          Hello! I'm Denver Persinger, an aspiring software developer with experience in Python, Java, C++, SQL, React/React Native, and Advanced Data Structures and Algorithms. I love creating impactful and out-of-the-box solutions while contributing to meaningful projects. When I'm not coding, you'll find me exploring new technologies, training for Muay Thai fights, or working on community-focused initiatives, such as my nonprofit <a href="https://www.onemoremoment.net" class="text-blue-600 hover:underline">One More Moment</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills and Hobbies Section -->
+  <section class="bg-black py-10">
+    <div class="mx-auto flex flex-column md:flex-row gap-x-8 justify-between px-4">
+      <div class="w-full mb-12 md:mb-0">
+        <h3 class="text-xl font-bold mb-4 text-white">Skills:</h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>💻</span><span>Python</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>📱</span><span>React/React Native</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>☕</span><span>Java</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>🔢</span><span>C++</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>📊</span><span>Databases</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>🧩</span><span>Algorithm Design and Implementation</span>
+          </li>
+        </ul>
+      </div>
+      <div class="w-full">
+        <h3 class="text-xl font-bold mb-4 text-white">Hobbies:</h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-300">
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>🥊</span><span>Muay Thai</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>📚</span><span>Reading</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>🌍</span><span>Community Work</span>
+          </li>
+          <li class="flex items-center space-x-2 bg-gray-800 p-4 rounded-lg hover:bg-gray-700">
+            <span>💻</span><span>Writing Code</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Section -->
+  <section class="bg-white py-10">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold mb-6 text-gray-900">Professional Experience</h2>
+      <details class="mb-6">
+        <summary class="cursor-pointer text-lg font-bold text-black">View My Resume!</summary>
+        <object data="../assets/docs/DenverPersinger_Resume2024.pdf" type="application/pdf" class="w-full h-96 border mt-4">
+          PDF not found
+        </object>
+      </details>
+      <p class="text-gray-700 mb-6">
+        Future Dev Intern @ Palantir! Excited to contribute to the impactful and important work they do while learning from some of the best in the industry.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer with Social Links -->
+  <footer class="bg-gray-900 py-6">
+    <div class="container mx-auto text-center px-4">
+      <p class="text-lg mb-4 text-gray-300">Connect with me:</p>
+      <p>
+        <a href="https://www.linkedin.com/in/denverpersinger" target="_blank" class="text-blue-400 hover:underline mr-4">&#x1F465; LinkedIn</a>
+        <a href="https://www.instagram.com/denver_per" target="_blank" class="text-pink-400 hover:underline">&#x1F4F7; Instagram</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

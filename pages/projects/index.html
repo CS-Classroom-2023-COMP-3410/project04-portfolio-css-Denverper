@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A portfolio showcasing various projects.">
+  <meta name="author" content="Denver Persinger">
+  <title>Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bubble {
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    }
+
+    .bubble img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+      transition: filter 0.3s ease-in-out;
+    }
+
+    .bubble:hover {
+      width: 90vw;
+      height: 90vh;
+      border-radius: 100%;
+      transform: none;
+    }
+
+    .bubble:active {
+      width: 90vw;
+      height: 90vh;
+      border-radius: 25%;
+      transform: none;
+    }
+
+    .bubble-text {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1.2rem;
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col">
+  <!-- Navigation Section -->
+  <nav class="bg-gray-800 py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-xl font-bold">Denver Persinger</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="../../index.html" class="hover:text-gray-400">Home</a></li>
+        <li><a href="../about.html" class="hover:text-gray-400">About Me</a></li>
+        <li><a href="../gallery/index.html" class="hover:text-gray-400">Gallery</a></li>
+        <li><a href="../contact.html" class="hover:text-gray-400">Contact</a></li>
+      </ul>
+      <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="menu" class="fixed z-20 inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
+      <a href="../../index.html" class="text-2xl hover:text-gray-400">Home</a>
+      <a href="pages/about.html" class="text-2xl hover:text-gray-400">About Me</a>
+      <a href="pages/gallery/index.html" class="text-2xl hover:text-gray-400">Gallery</a>
+      <a href="pages/contact.html" class="text-2xl hover:text-gray-400">Contact Me</a>
+      <button id="menu-close" class="mt-8 py-2 px-6 bg-gray-800 text-white rounded hover:bg-gray-700">Close</button>
+    </div>
+  </nav>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuClose = document.getElementById('menu-close');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.remove('hidden');
+    });
+
+    menuClose.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  </script>
+
+  <!-- Title Section -->
+  <header class="text-center pt-12">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">My Projects</h2>
+    <p class="text-lg md:text-2xl">Click on a project to learn more:</p>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="flex flex-col md:flex-row md:space-x-12 space-y-12 md:space-y-0 justify-center items-center gap-8 px-4 py-12">
+    <!-- Project 1 -->
+    <a href="./stable_matching.html" class="bubble bg-blue-500">
+      <img src="../../assets/images/stable_pre.png" alt="Stable Matching">
+      <div class="bubble-text z-10">Stable Matching</div>
+      <div class="absolute bg-blue-900 w-full h-full bg-opacity-[.3]"></div>
+    </a>
+
+    <!-- Project 2 -->
+    <a href="./digilingo.html" class="bubble bg-green-500">
+      <img src="../../assets/images/digi_pre.png" alt="Digilingo">
+      <div class="bubble-text">Digilingo</div>
+      <div class="absolute bg-green-900 w-full h-full bg-opacity-[.3]"></div>
+    </a>
+
+    <!-- Project 3 -->
+    <a href="./music_generator.html" class="bubble bg-yellow-500">
+      <img src="../../assets/images/music_pre.png" alt="Music Generator">
+      <div class="bubble-text">Music Generator</div>
+      <div class="absolute bg-red-900 w-full h-full bg-opacity-[.3]"></div>
+    </a>
+  </section>
+</body>
+</html>
