@@ -7,14 +7,18 @@
   <meta name="keywords" content="Digilingo, digital literacy, Flutter, Denver Public Schools, DPS, education, technology">
   <meta name="author" content="Denver Persinger">
   <title>Digilingo</title>
+  <!-- Include Tailwind CSS from CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="../../info.css">
 </head>
 <body class="bg-green-900 text-gray-100 font-sans">
 
+  <!-- Navigation bar -->
   <nav class="bg-gray-400 py-4 sticky shadow-md w-full">
     <div class="container mx-auto flex justify-between items-center px-6">
       <h1 class="text-xl font-bold">Denver Persinger</h1>
+      <!-- Navigation links for larger screens -->
       <ul class="hidden md:flex space-x-6">
         <li><a href="../../index.html" class="hover:text-gray-400">Home</a></li>
         <li><a href="../about.html" class="hover:text-gray-400">About Me</a></li>
@@ -22,6 +26,7 @@
         <li><a href="../gallery/index.html" class="hover:text-gray-400">Gallery</a></li>
         <li><a href="../contact.html" class="hover:text-gray-400">Contact</a></li>
       </ul>
+      <!-- Menu toggle button for smaller screens -->
       <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -29,6 +34,7 @@
       </button>
     </div>
 
+    <!-- Mobile menu -->
     <div id="menu" class="fixed z-20 inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
       <a href="../../index.html" class="text-2xl hover:text-gray-400">Home</a>
       <a href="../about.html" class="text-2xl hover:text-gray-400">About Me</a>
@@ -39,6 +45,7 @@
     </div>
   </nav>
 
+  <!-- JavaScript for menu toggle functionality -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');

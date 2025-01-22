@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../info.css">
   <style>
+    /* Bubble styling */
     .bubble {
       position: relative;
       overflow: hidden;
@@ -18,6 +19,7 @@
       transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
     }
 
+    /* Image inside bubble */
     .bubble img {
       position: absolute;
       top: 0;
@@ -29,6 +31,7 @@
       transition: filter 0.3s ease-in-out;
     }
 
+    /* Bubble hover effect */
     .bubble:hover {
       width: 90vw;
       height: 90vh;
@@ -36,6 +39,7 @@
       transform: none;
     }
 
+    /* Bubble active effect */
     .bubble:active {
       width: 90vw;
       height: 90vh;
@@ -43,6 +47,7 @@
       transform: none;
     }
 
+    /* Text inside bubble */
     .bubble-text {
       position: absolute;
       bottom: 10%;
@@ -72,6 +77,7 @@
       </button>
     </div>
 
+    <!-- Mobile menu -->
     <div id="menu" class="fixed z-20 inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
       <a href="../../index.html" class="text-2xl hover:text-gray-400">Home</a>
       <a href="../about.html" class="text-2xl hover:text-gray-400">About Me</a>
@@ -82,6 +88,7 @@
   </nav>
 
   <script>
+    // Toggle mobile menu
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
     const menuClose = document.getElementById('menu-close');

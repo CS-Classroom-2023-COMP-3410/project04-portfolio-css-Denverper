@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../info.css">
 </head>
 
+<!-- Navigation bar -->
 <nav class="bg-gray-800 py-4 shadow-md sticky w-full">
   <div class="container mx-auto flex justify-between items-center px-6">
     <h1 class="text-xl font-bold">Denver Persinger</h1>
@@ -27,6 +28,7 @@
     </button>
   </div>
 
+  <!-- Mobile menu -->
   <div id="menu" class="fixed z-20 inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
     <a href="../../index.html" class="text-2xl hover:text-gray-400">Home</a>
     <a href="../about.html" class="text-2xl hover:text-gray-400">About Me</a>
@@ -38,6 +40,7 @@
 </nav>
 
 <script>
+  // Toggle menu visibility
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
   const menuClose = document.getElementById('menu-close');

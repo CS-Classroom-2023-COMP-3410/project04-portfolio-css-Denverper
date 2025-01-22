@@ -9,6 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../info.css">
   <style>
+    /* Styling for feature bubbles */
     .feature-bubble {
       border-radius: 9999px;
       background-color: #ebf8ff;
@@ -48,6 +49,7 @@
     </p>
   </header>
 
+  <!-- Navigation Section -->
   <nav class="bg-black py-4 sticky shadow-md w-full bg-opacity-90 z-50">
     <div class="container mx-auto flex justify-between items-center px-6">
       <h1 class="text-xl font-bold text-white">Denver Persinger</h1>
@@ -65,6 +67,7 @@
       </button>
     </div>
 
+    <!-- Mobile Menu -->
     <div id="menu" class="fixed z-20 inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-8">
       <a href="../../index.html" class="text-2xl hover:text-gray-400">Home</a>
       <a href="../about.html" class="text-2xl hover:text-gray-400">About Me</a>
@@ -76,6 +79,7 @@
   </nav>
 
   <script>
+    // Toggle mobile menu visibility
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
     const menuClose = document.getElementById('menu-close');
