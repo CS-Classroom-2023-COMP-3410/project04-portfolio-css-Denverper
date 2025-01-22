@@ -1,15 +1,64 @@
 /**
  * I do not have a large external CSS file as I used tailwindcss as my framework, relying on custom classname styling throughout the project.
  * By using tailwind CDN and CLI, I do not need a output.css file, however, the cdn (https://cdn.tailwindcss.com/3.4.16) is the same thing
- * I included this page to show that I am able to write custom, raw CSS.
+ * I included this page with some fun CSS to change the font and other tags to show that I am able to write custom, raw CSS.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/** Use space mono across site to go with space theme */
 body {
     font-family: 'Space Mono', monospace;
     font-size: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/** Use space mono across site to go with space theme */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Mono', monospace;
     font-size: 22px;
+    color: #cecdcd;
+    margin: 0;
+}
+
+/** Use space mono across site to go with space theme */
+p {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/** This influences the nav bar and all other anchors */
+a {
+    color: #ac07bb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/** This influences the nav bar */
+.container { 
+    margin: 0 auto;
+    padding: 5px;
+}
+
+button {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f2f2f2;
 }
