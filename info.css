@@ -1,4 +1,15 @@
 /**
- * I do not have an external CSS file as I used tailwindcss as my framework, relying on custom classname styling 
+ * I do not have a large external CSS file as I used tailwindcss as my framework, relying on custom classname styling throughout the project.
  * By using tailwind CDN and CLI, I do not need a output.css file, however, the cdn (https://cdn.tailwindcss.com/3.4.16) is the same thing
+ * I included this page to show that I am able to write custom, raw CSS.
  */
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+}
